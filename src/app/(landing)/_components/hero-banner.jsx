@@ -189,14 +189,23 @@ const HeroBanner = () => {
             <div style={socialIconsStyle}>
                 <a
                     href="https://www.linkedin.com/in/edanur-korkmaz/"
+                    target="_blank"
                     style={iconStyle}
                 >
                     <i className="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/edanuurkorkmaz" style={iconStyle}>
+                <a
+                    href="https://github.com/edanuurkorkmaz"
+                    target="_blank"
+                    style={iconStyle}
+                >
                     <i className="fab fa-github"></i>
                 </a>
-                <a href="https://x.com/edanuurkorkmaz" style={iconStyle}>
+                <a
+                    href="https://x.com/edanuurkorkmaz"
+                    target="_blank"
+                    style={iconStyle}
+                >
                     <i className="fab fa-twitter"></i>
                 </a>
             </div>

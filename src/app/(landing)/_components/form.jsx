@@ -37,7 +37,7 @@ const Form = () => {
         );
 
         // Resetting Form
-        document.getElementById("queryForm").reset();
+        document.querySelector("queryForm").reset();
     };
 
     const onChange = (e) => {
