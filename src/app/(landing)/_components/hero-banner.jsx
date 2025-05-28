@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import Wrapper from "./wrapper";
-import { scrollTo } from "./helper.js";
+import { scrollTo } from "../../../components/helper.js";
 import { useFollowPointer } from "@/components/use-follow-pointer";
 
 const HeroBanner = () => {
