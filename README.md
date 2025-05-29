@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌐 edanurkorkmaz.com
 
-## Getting Started
+This is my personal portfolio website, built with **Next.js** and **Tailwind CSS**.  
+It showcases my projects, skills, and professional background as a **Front-End Developer**.
 
-First, run the development server:
+> 🔗 Visit it live at: [www.edanurkorkmaz.com](https://www.edanurkorkmaz.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Fully responsive and modern design
+- Developed with **Next.js (App Router)**
+- Styled using **Tailwind CSS**
+- Accessible (a11y) and SEO-friendly
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧠 Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework**: Next.js 14+
+- **Styling**: Tailwind CSS
+- **Deployment**: Vercel
+- **Other Tools**: Figma (design), Git & GitHub (version control)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📸 Screenshots
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![image](https://github.com/user-attachments/assets/c87dc58a-f398-4895-a6a0-d757f1bb4522)
+![Ekran görüntüsü 2025-05-29 201145](https://github.com/user-attachments/assets/6513e910-e87b-4efa-83d2-1165a54ea0b6)
