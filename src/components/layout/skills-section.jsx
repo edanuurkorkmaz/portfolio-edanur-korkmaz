@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 import { useState, useEffect } from "react";
 import {
     skills,
@@ -33,12 +31,12 @@ export default function SkillsSection() {
     return (
         <section
             id="skills"
-            className="py-20 bg-gradient-to-b from-transparent to-black/20 relative"
+            className="py-20 bg-gradient-to-b from-transparent to-[#2A305F]/20 relative"
         >
             {/* Background decorative elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-orange-500/5 rounded-full blur-2xl"></div>
-                <div className="absolute bottom-1/4 left-1/4 w-40 h-40 bg-purple-500/5 rounded-full blur-2xl"></div>
+                <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-[#71C0BB]/5 rounded-full blur-2xl"></div>
+                <div className="absolute bottom-1/4 left-1/4 w-40 h-40 bg-[#334A81]/5 rounded-full blur-2xl"></div>
             </div>
 
             <div className="container mx-auto px-6 lg:px-12 relative z-10">
@@ -46,7 +44,7 @@ export default function SkillsSection() {
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
                         My{" "}
-                        <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-[#71C0BB] to-[#334A81] bg-clip-text text-transparent">
                             Skills
                         </span>
                     </h2>
@@ -64,7 +62,7 @@ export default function SkillsSection() {
                             onClick={() => setSelectedCategory(category)}
                             className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                                 selectedCategory === category
-                                    ? "bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg scale-105"
+                                    ? "bg-gradient-to-r from-[#71C0BB] to-[#334A81] text-white shadow-lg scale-105"
                                     : "bg-white/10 text-white/70 hover:bg-white/20 hover:text-white"
                             }`}
                         >
@@ -107,8 +105,8 @@ export default function SkillsSection() {
 
                                     {/* Hover Effect Indicator */}
                                     <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div className="flex items-center gap-2 text-xs text-orange-300">
-                                            <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+                                        <div className="flex items-center gap-2 text-xs text-[#71C0BB]">
+                                            <div className="w-2 h-2 bg-[#71C0BB] rounded-full animate-pulse"></div>
                                             <span>Actively using</span>
                                         </div>
                                     </div>
@@ -121,7 +119,7 @@ export default function SkillsSection() {
                 <div className="mt-16 text-center">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                         <div className="space-y-2">
-                            <div className="text-3xl font-bold text-orange-300">
+                            <div className="text-3xl font-bold text-[#71C0BB]">
                                 {personalInfo.stats.technologies}
                             </div>
                             <div className="text-sm text-white/70">
@@ -129,7 +127,7 @@ export default function SkillsSection() {
                             </div>
                         </div>
                         <div className="space-y-2">
-                            <div className="text-3xl font-bold text-orange-300">
+                            <div className="text-3xl font-bold text-[#71C0BB]">
                                 {personalInfo.stats.projects}
                             </div>
                             <div className="text-sm text-white/70">
@@ -137,7 +135,7 @@ export default function SkillsSection() {
                             </div>
                         </div>
                         <div className="space-y-2">
-                            <div className="text-3xl font-bold text-orange-300">
+                            <div className="text-3xl font-bold text-[#71C0BB]">
                                 {personalInfo.stats.experience}
                             </div>
                             <div className="text-sm text-white/70">
@@ -145,7 +143,7 @@ export default function SkillsSection() {
                             </div>
                         </div>
                         <div className="space-y-2">
-                            <div className="text-3xl font-bold text-orange-300">
+                            <div className="text-3xl font-bold text-[#71C0BB]">
                                 {personalInfo.stats.passion}
                             </div>
                             <div className="text-sm text-white/70">Passion</div>

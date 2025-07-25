@@ -14,12 +14,12 @@ export default function AboutSection() {
     return (
         <section
             id="about"
-            className="py-20 bg-gradient-to-b from-black/20 to-transparent relative"
+            className="py-20 bg-gradient-to-b from-[#2A305F]/20 to-transparent relative"
         >
             {/* Background decorative elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-1/3 left-1/6 w-24 h-24 bg-purple-500/5 rounded-full blur-xl"></div>
-                <div className="absolute bottom-1/3 right-1/6 w-32 h-32 bg-orange-500/5 rounded-full blur-xl"></div>
+                <div className="absolute top-1/3 left-1/6 w-24 h-24 bg-[#334A81]/5 rounded-full blur-xl"></div>
+                <div className="absolute bottom-1/3 right-1/6 w-32 h-32 bg-[#71C0BB]/5 rounded-full blur-xl"></div>
             </div>
 
             <div className="container mx-auto px-6 lg:px-12 relative z-10">
@@ -27,7 +27,7 @@ export default function AboutSection() {
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
                         About{" "}
-                        <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-[#71C0BB] to-[#334A81] bg-clip-text text-transparent">
                             Me
                         </span>
                     </h2>
@@ -48,7 +48,7 @@ export default function AboutSection() {
                             <div className="space-y-4 text-white/80 leading-relaxed">
                                 <p>
                                     Hi there! I'm{" "}
-                                    <span className="text-orange-300 font-semibold">
+                                    <span className="text-[#71C0BB] font-semibold">
                                         {personalInfo.name}
                                     </span>
                                     , a passionate frontend developer who
@@ -69,15 +69,15 @@ export default function AboutSection() {
                                 </p>
                                 <p>
                                     Today, I specialize in{" "}
-                                    <span className="text-orange-300">
+                                    <span className="text-[#71C0BB]">
                                         React
                                     </span>
                                     ,{" "}
-                                    <span className="text-orange-300">
+                                    <span className="text-[#71C0BB]">
                                         Next.js
                                     </span>
                                     , and{" "}
-                                    <span className="text-orange-300">
+                                    <span className="text-[#71C0BB]">
                                         Tailwind CSS
                                     </span>
                                     , but I'm always eager to learn new
@@ -109,7 +109,7 @@ export default function AboutSection() {
                                         className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
                                     >
                                         <div className="flex items-center gap-3 mb-2">
-                                            <div className="p-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg text-white group-hover:scale-110 transition-transform duration-300">
+                                            <div className="p-2 bg-gradient-to-r from-[#71C0BB] to-[#334A81] rounded-lg text-white group-hover:scale-110 transition-transform duration-300">
                                                 <IconComponent className="w-5 h-5" />
                                             </div>
                                             <div>
@@ -134,7 +134,7 @@ export default function AboutSection() {
                     <div className="space-y-8">
                         <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
                             <h3 className="text-2xl font-bold mb-8 text-white flex items-center gap-3">
-                                <Calendar className="w-6 h-6 text-orange-400" />
+                                <Calendar className="w-6 h-6 text-[#71C0BB]" />
                                 My Journey
                             </h3>
 
@@ -151,7 +151,7 @@ export default function AboutSection() {
                                             }`}
                                             onClick={() => setActiveStep(index)}
                                         >
-                                            {/* Timeline line remains the same */}
+                                            {/* Timeline line */}
                                             {index <
                                                 journeySteps.length - 1 && (
                                                 <div className="absolute left-6 top-12 w-0.5 h-16 bg-gradient-to-b from-white/20 to-transparent"></div>
@@ -160,7 +160,7 @@ export default function AboutSection() {
                                             <div
                                                 className={`flex gap-4 p-4 rounded-2xl transition-all duration-300 ${
                                                     activeStep === index
-                                                        ? "bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30"
+                                                        ? "bg-gradient-to-r from-[#71C0BB]/20 to-[#334A81]/20 border border-[#71C0BB]/30"
                                                         : "bg-white/5 border border-white/10 hover:bg-white/10"
                                                 }`}
                                             >
@@ -172,7 +172,7 @@ export default function AboutSection() {
 
                                                 <div className="flex-1 min-w-0">
                                                     <div className="flex items-center gap-2 mb-1">
-                                                        <span className="text-sm font-medium text-orange-300">
+                                                        <span className="text-sm font-medium text-[#71C0BB]">
                                                             {step.year}
                                                         </span>
                                                         <ChevronRight className="w-4 h-4 text-white/40" />
@@ -198,7 +198,7 @@ export default function AboutSection() {
                         </div>
 
                         {/* Call to Action */}
-                        <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 backdrop-blur-sm rounded-2xl p-6 border border-orange-500/20 text-center">
+                        <div className="bg-gradient-to-r from-[#71C0BB]/10 to-[#334A81]/10 backdrop-blur-sm rounded-2xl p-6 border border-[#71C0BB]/20 text-center">
                             <h4 className="text-xl font-semibold text-white mb-3">
                                 Let's Work Together!
                             </h4>
@@ -209,7 +209,7 @@ export default function AboutSection() {
                             <div className="flex flex-col sm:flex-row gap-3 justify-center">
                                 <a
                                     href="#contact"
-                                    className="px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-medium rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 hover:scale-105 shadow-lg"
+                                    className="px-6 py-3 bg-gradient-to-r from-[#71C0BB] to-[#334A81] text-white font-medium rounded-full hover:from-[#71C0BB]/80 hover:to-[#334A81]/80 transition-all duration-300 hover:scale-105 shadow-lg"
                                 >
                                     Get In Touch
                                 </a>

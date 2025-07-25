@@ -14,10 +14,8 @@ import {
     Target,
     Code2,
 } from "lucide-react";
-import { LucideIcon } from "lucide-react";
 
-// PERSONAL INFORMATION
-
+// Personal Information
 export const personalInfo = {
     name: "Edanur Korkmaz",
     title: "Frontend Developer",
@@ -35,8 +33,7 @@ export const personalInfo = {
     },
 };
 
-// SOCIAL LINKS
-
+// Social Media Links
 export const socialLinks = [
     {
         name: "LinkedIn",
@@ -49,58 +46,90 @@ export const socialLinks = [
         icon: "github",
     },
     {
-        name: "X",
+        name: "Twitter",
         url: "https://x.com/edanuurkorkmaz",
-        icon: "X",
+        icon: "twitter",
     },
 ];
 
+// Navigation Items
+export const navigationItems = [
+    { href: "#home", label: "Home" },
+    { href: "#about", label: "About me" },
+    { href: "#skills", label: "Skills" },
+    { href: "#work", label: "Work" },
+    { href: "#contact", label: "Contact" },
+];
+
+// Skills Data
 export const skills = [
     {
         name: "React",
+        level: 90,
         category: "Frontend",
         icon: Code,
+        color: "from-blue-400 to-blue-600",
         description:
-            "Building dynamic user interfaces with hooks, context, and modern patterns.",
+            "Building dynamic user interfaces with hooks, context, and modern patterns",
     },
     {
         name: "Next.js",
+        level: 85,
         category: "Frontend",
         icon: Globe,
+        color: "from-slate-600 to-slate-800",
         description:
-            "Creating server-rendered React applications with optimized performance and SEO.",
+            "Full-stack React framework with SSR, API routes, and optimizations",
     },
     {
         name: "Tailwind CSS",
+        level: 95,
         category: "Styling",
         icon: Palette,
-        description:
-            "Utilizing utility-first CSS for rapid and responsive design implementation.",
+        color: "from-cyan-400 to-teal-500",
+        description: "Utility-first CSS framework for rapid UI development",
     },
     {
         name: "JavaScript",
+        level: 88,
         category: "Programming",
         icon: Zap,
+        color: "from-yellow-400 to-amber-500",
         description:
             "Modern ES6+ JavaScript with async/await, modules, and DOM manipulation",
     },
     {
+        name: "TypeScript",
+        level: 82,
+        category: "Programming",
+        icon: Code,
+        color: "from-blue-500 to-indigo-600",
+        description:
+            "Type-safe JavaScript development with interfaces and generics",
+    },
+    {
         name: "Responsive Design",
+        level: 92,
         category: "Design",
         icon: Smartphone,
+        color: "from-emerald-400 to-teal-500",
         description: "Mobile-first design approach with CSS Grid and Flexbox",
     },
     {
         name: "Git & GitHub",
+        level: 80,
         category: "Tools",
         icon: Database,
+        color: "from-violet-400 to-purple-600",
         description:
             "Version control, branching strategies, and collaborative development",
     },
     {
         name: "UI/UX Design",
+        level: 75,
         category: "Design",
         icon: Palette,
+        color: "from-pink-400 to-rose-500",
         description:
             "User-centered design principles and modern interface patterns",
     },
@@ -114,6 +143,8 @@ export const skillCategories = [
     "Design",
     "Tools",
 ];
+
+// Personal Facts
 export const personalFacts = [
     {
         icon: MapPin,
@@ -142,6 +173,8 @@ export const personalFacts = [
         description: "Constantly exploring new technologies and best practices",
     },
 ];
+
+// Professional Journey
 export const journeySteps = [
     {
         year: "2023",
@@ -149,7 +182,7 @@ export const journeySteps = [
         description:
             "Started my journey into web development, discovering my passion for creating beautiful, functional user interfaces.",
         icon: Code2,
-        color: "from-purple-400 to-purple-600",
+        color: "from-violet-400 to-purple-600",
     },
     {
         year: "2023",
@@ -157,7 +190,7 @@ export const journeySteps = [
         description:
             "Mastered React, Next.js, and Tailwind CSS. Built my first responsive web applications and fell in love with component-based architecture.",
         icon: Lightbulb,
-        color: "from-blue-400 to-blue-600",
+        color: "from-blue-400 to-indigo-600",
     },
     {
         year: "2024",
@@ -165,7 +198,7 @@ export const journeySteps = [
         description:
             "Completed 25+ projects, focusing on user experience and modern design principles. Continuously learning and improving my craft.",
         icon: Target,
-        color: "from-orange-400 to-red-500",
+        color: "from-teal-400 to-cyan-500",
     },
     {
         year: "Present",
@@ -173,10 +206,11 @@ export const journeySteps = [
         description:
             "Currently seeking opportunities to contribute to innovative projects and collaborate with amazing teams to create exceptional web experiences.",
         icon: Award,
-        color: "from-green-400 to-emerald-600",
+        color: "from-emerald-400 to-teal-600",
     },
 ];
 
+// Projects Data
 export const projects = [
     {
         id: "ecommerce-dashboard",
@@ -305,6 +339,7 @@ export const projectCategories = [
     "Mobile App",
 ];
 
+// Contact Information
 export const contactInfo = {
     email: "edanuurkorkmaz@gmail.com",
     phone: "+90 XXX XXX XX XX",
@@ -313,6 +348,22 @@ export const contactInfo = {
     responseTime: "Usually responds within 24 hours",
 };
 
+// Testimonials (if you have any)
+export const testimonials = [
+    {
+        id: "1",
+        name: "Client Name",
+        role: "Project Manager",
+        company: "Tech Company",
+        content:
+            "Edanur delivered exceptional work on our project. Her attention to detail and technical skills are outstanding.",
+        avatar: "/images/testimonials/client1.jpg",
+        rating: 5,
+    },
+    // Add more testimonials as needed
+];
+
+// Resume/CV Data
 export const resumeData = {
     education: [
         {
@@ -356,6 +407,6 @@ export const seoData = {
         "Web Development",
     ],
     author: "Edanur Korkmaz",
-    url: "https://edanur-korkmaz.vercel.app",
+    url: "https://edanurkorkmaz.com",
     image: "/images/og-image.jpg",
 };

@@ -1,6 +1,5 @@
 "use client";
 
-import BeamsBackground from "../ui/beam-background";
 import { motion } from "motion/react";
 import Navbar from "./navbar";
 import { Button } from "../ui/button";
@@ -20,7 +19,7 @@ export default function Hero() {
                                 transition={{ duration: 0.8 }}
                             >
                                 I AM A <br />
-                                <span className="bg-gradient-to-r from-[#2A305F] to-[#334A81] bg-clip-text text-transparent">
+                                <span className="bg-gradient-to-r from-[#71C0BB] to-[#334A81] bg-clip-text text-transparent">
                                     FRONTEND
                                 </span>
                                 {""} DEVELOPER
@@ -80,10 +79,10 @@ export default function Hero() {
                         </div>
                     </div>
                     <div className="flex justify-center lg:justify-end items-center lg:items-end relative">
-                        <div className="relative">
+                        <div className="relative group cursor-pointer">
                             {/* Background glow effect */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-[#fff]/20 to-purple-400/20 rounded-full blur-2xl scale-110"></div>
-                            <div className="w-72 h-72 md:w-80 md:h-80 lg:w-[420px] lg:h-[420px] relative">
+                            <div className="absolute inset-0 bg-gradient-to-br from-[#71C0BB]/20 to-[#334A81]/20 rounded-full blur-2xl scale-110 group-hover:scale-125 group-hover:from-[#71C0BB]/30 group-hover:to-[#334A81]/30 transition-all duration-500"></div>
+                            <div className="w-72 h-72 md:w-80 md:h-80 lg:w-[420px] lg:h-[420px] relative group-hover:scale-105 transition-all duration-500 ease-out">
                                 <motion.img
                                     initial={{ opacity: 0, scale: 0.8 }}
                                     animate={{ opacity: 1, scale: 1 }}
@@ -93,18 +92,33 @@ export default function Hero() {
                                     width={420}
                                     height={420}
                                     className="w-full h-full object-contain filter drop-shadow-2xl relative z-10"
-                                    priority
                                 />
+                                {/* Enhanced decorative elements with hover animations */}
+                                <div className="absolute -top-6 -right-6 w-10 h-10 bg-gradient-to-r from-[#71C0BB] to-[#334A81] rounded-full opacity-80 animate-pulse shadow-lg group-hover:scale-125 group-hover:opacity-100 group-hover:-translate-y-2 group-hover:translate-x-2 transition-all duration-300"></div>
 
-                                {/* Enhanced decorative elements with better positioning */}
-                                <div className="absolute -top-6 -right-6 w-10 h-10 bg-gradient-to-r from-blue-400 to-green-400 rounded-full opacity-80 animate-pulse shadow-lg"></div>
-                                <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-70 animate-pulse delay-1000 shadow-lg"></div>
-                                <div className="absolute top-1/3 -left-8 w-6 h-6 bg-gradient-to-r from-green-400 to-blue-400 rounded-full opacity-60 animate-pulse delay-500 shadow-lg"></div>
-                                <div className="absolute bottom-1/3 -right-2 w-4 h-4 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full opacity-50 animate-pulse delay-700 shadow-lg"></div>
+                                <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-gradient-to-r from-[#334A81] to-[#2A305F] rounded-full opacity-70 animate-pulse delay-1000 shadow-lg group-hover:scale-125 group-hover:opacity-90 group-hover:translate-y-2 group-hover:-translate-x-2 transition-all duration-300 delay-100"></div>
 
-                                {/* Floating geometric shapes */}
-                                <div className="absolute top-1/4 right-1/4 w-3 h-3 bg-white/30 rotate-45 animate-pulse delay-300"></div>
-                                <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-white/20 rounded-full animate-pulse delay-900"></div>
+                                <div className="absolute top-1/3 -left-8 w-6 h-6 bg-gradient-to-r from-[#2A305F] to-[#71C0BB] rounded-full opacity-60 animate-pulse delay-500 shadow-lg group-hover:scale-150 group-hover:opacity-80 group-hover:-translate-x-3 group-hover:-translate-y-1 transition-all duration-300 delay-200"></div>
+
+                                <div className="absolute bottom-1/3 -right-2 w-4 h-4 bg-gradient-to-r from-[#71C0BB] to-[#334A81] rounded-full opacity-50 animate-pulse delay-700 shadow-lg group-hover:scale-125 group-hover:opacity-70 group-hover:translate-x-3 group-hover:translate-y-1 transition-all duration-300 delay-150"></div>
+
+                                {/* Floating geometric shapes with hover effects */}
+                                <div className="absolute top-1/4 right-1/4 w-3 h-3 bg-white/30 rotate-45 animate-pulse delay-300 group-hover:rotate-[225deg] group-hover:scale-125 group-hover:bg-white/50 transition-all duration-500"></div>
+
+                                <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-white/20 rounded-full animate-pulse delay-900 group-hover:scale-150 group-hover:bg-white/40 transition-all duration-300"></div>
+
+                                {/* New hover-only elements */}
+                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-[#71C0BB]/0 group-hover:border-b-[#71C0BB]/30 group-hover:scale-100 transition-all duration-500 delay-300"></div>
+
+                                {/* Orbiting elements on hover */}
+                                <div
+                                    className="absolute top-1/2 left-1/2 w-1 h-1 bg-[#71C0BB] rounded-full opacity-0 group-hover:opacity-60 group-hover:animate-spin transition-all duration-300"
+                                    style={{
+                                        transform:
+                                            "translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg)",
+                                        animation: "orbit 3s linear infinite",
+                                    }}
+                                ></div>
                             </div>
                         </div>
                     </div>
