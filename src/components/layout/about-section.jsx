@@ -214,7 +214,8 @@ export default function AboutSection() {
                                     Get In Touch
                                 </a>
                                 <a
-                                    href="#work"
+                                    href="https://github.com/edanuurkorkmaz"
+                                    target="_blank"
                                     className="px-6 py-3 bg-white/10 text-white font-medium rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20"
                                 >
                                     View My Work

@@ -70,12 +70,13 @@ export default function Hero() {
                             </div>
                         </div>
                         <div className="pt-6">
-                            <Button
-                                size="lg"
-                                className=" cursor-pointer bg-gradient-to-r from-[#334A81] to-[#71C0BB] hover:from-[#2c406e] hover:to-[#129990] text-white font-semibold px-8 py-6 rounded-full text-lg shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105"
+                            <a
+                                href="https://github.com/edanuurkorkmaz"
+                                target="_blank"
+                                className="px-6 py-3 bg-gradient-to-r from-[#334A81] to-[#71C0BB] hover:from-[#2c406e] hover:to-[#129990] text-white font-semibold rounded-full hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105transition-all hover:scale-105 shadow-lg"
                             >
                                 Hire Me
-                            </Button>
+                            </a>
                         </div>
                     </div>
                     <div className="flex justify-center lg:justify-end items-center lg:items-end relative">

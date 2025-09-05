@@ -4,7 +4,6 @@ import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import {
     Mail,
-    Phone,
     MapPin,
     Send,
     CheckCircle,
@@ -13,7 +12,7 @@ import {
     User,
 } from "lucide-react";
 import { contactInfo, personalInfo } from "@/app/data/portfolio-data";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
 export default function ContactSection() {
     const form = useRef();
@@ -24,32 +23,17 @@ export default function ContactSection() {
         message: "",
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
+    const [submitStatus, setSubmitStatus] = useState(null);
     const [errors, setErrors] = useState({});
 
     // EmailJS Configuration
     const EMAILJS_CONFIG = {
         serviceId:
-            process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "your_service_id",
+            process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_0ntwuhc",
         templateId:
-            process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "your_template_id",
+            process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_emrgclc",
         publicKey:
-            process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "your_public_key",
-    };
-
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prev) => ({
-            ...prev,
-            [name]: value,
-        }));
-        // Clear error when user starts typing
-        if (errors[name]) {
-            setErrors((prev) => ({
-                ...prev,
-                [name]: "",
-            }));
-        }
+            process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "LMRVez-qpQWsbrI6P",
     };
 
     const validateForm = () => {
@@ -81,6 +65,7 @@ export default function ContactSection() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log("EmailJS Config:", EMAILJS_CONFIG);
 
         if (!validateForm()) {
             return;
@@ -122,39 +107,11 @@ export default function ContactSection() {
                 subject: "",
                 message: "",
             });
-
-            // Optional: Send auto-reply to user
-            await sendAutoReply();
         } catch (error) {
             console.error("Failed to send email:", error);
             setSubmitStatus("error");
         } finally {
             setIsSubmitting(false);
-        }
-    };
-
-    const sendAutoReply = async () => {
-        try {
-            // Auto-reply template (optional)
-            const autoReplyTemplateId =
-                process.env.NEXT_PUBLIC_EMAILJS_AUTOREPLY_TEMPLATE_ID;
-
-            if (autoReplyTemplateId) {
-                await emailjs.send(
-                    EMAILJS_CONFIG.serviceId,
-                    autoReplyTemplateId,
-                    {
-                        to_email: formData.email,
-                        to_name: formData.name,
-                        reply_to: personalInfo.email,
-                    },
-                    EMAILJS_CONFIG.publicKey
-                );
-                console.log("Auto-reply sent successfully");
-            }
-        } catch (error) {
-            console.error("Failed to send auto-reply:", error);
-            // Don't show error to user for auto-reply failure
         }
     };
 
@@ -165,13 +122,6 @@ export default function ContactSection() {
             value: contactInfo.email,
             href: `mailto:${contactInfo.email}`,
             description: "Send me an email",
-        },
-        {
-            icon: Phone,
-            label: "Phone",
-            value: contactInfo.phone,
-            href: `tel:${contactInfo.phone}`,
-            description: "Give me a call",
         },
         {
             icon: MapPin,
@@ -274,26 +224,6 @@ export default function ContactSection() {
                                 <div className="text-xs text-white/70">
                                     Response Time
                                 </div>
-                            </div>
-                        </div>
-
-                        {/* EmailJS Status Indicator */}
-                        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-                            <div className="flex items-center gap-2">
-                                <div
-                                    className={`w-2 h-2 rounded-full ${
-                                        EMAILJS_CONFIG.serviceId !==
-                                        "your_service_id"
-                                            ? "bg-green-400"
-                                            : "bg-yellow-400"
-                                    }`}
-                                ></div>
-                                <span className="text-sm text-white/70">
-                                    {EMAILJS_CONFIG.serviceId !==
-                                    "your_service_id"
-                                        ? "Email service active"
-                                        : "Email service setup required"}
-                                </span>
                             </div>
                         </div>
                     </div>
@@ -460,7 +390,7 @@ export default function ContactSection() {
                             <Button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="w-full bg-gradient-to-r from-[#71C0BB] to-[#334A81] hover:from-[#71C0BB]/80 hover:to-[#334A81]/80 text-white font-semibold py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                                className="cursor-pointer w-full bg-gradient-to-r from-[#71C0BB] to-[#334A81] hover:from-[#71C0BB]/80 hover:to-[#334A81]/80 text-white font-semibold py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                             >
                                 {isSubmitting ? (
                                     <div className="flex items-center gap-2">
@@ -477,7 +407,10 @@ export default function ContactSection() {
 
                             {/* Status Messages */}
                             {submitStatus === "success" && (
-                                <div className="flex items-center gap-2 p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-xl">
+                                <div
+                                    className="flex items-center gap-2 p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-xl"
+                                    aria-live="polite"
+                                >
                                     <CheckCircle className="w-5 h-5 text-emerald-400" />
                                     <div>
                                         <p className="text-emerald-400 font-medium">
@@ -534,7 +467,8 @@ export default function ContactSection() {
                                 Email Me Directly
                             </a>
                             <a
-                                href="#work"
+                                href="https://github.com/edanuurkorkmaz"
+                                target="_blank"
                                 className="px-6 py-3 bg-white/10 text-white font-medium rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20"
                             >
                                 View My Work

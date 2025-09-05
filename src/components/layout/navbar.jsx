@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Twitter, Mail, Menu } from "lucide-react";
+import { Link as ScrollLink } from "react-scroll";
 
 import Link from "next/link";
 
@@ -16,30 +17,42 @@ export default function Navbar() {
 
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex items-center gap-8">
-                    <Link
-                        href="#about"
-                        className="text-sm font-medium hover:text-purple-400 transition-colors"
+                    <ScrollLink
+                        to="about"
+                        smooth={true}
+                        duration={500}
+                        offset={-80} // navbar yüksekliği kadar offset ekleyebilirsin
+                        className="text-sm font-medium hover:text-purple-400 transition-colors cursor-pointer"
                     >
                         About me
-                    </Link>
-                    <Link
-                        href="#skills"
-                        className="text-sm font-medium hover:text-purple-400 transition-colors"
+                    </ScrollLink>
+                    <ScrollLink
+                        to="skills"
+                        smooth={true}
+                        duration={500}
+                        offset={-80}
+                        className="text-sm font-medium hover:text-purple-400 transition-colors cursor-pointer"
                     >
                         Skills
-                    </Link>
-                    <Link
-                        href="#work"
-                        className="text-sm font-medium hover:text-purple-400 transition-colors"
+                    </ScrollLink>
+                    <ScrollLink
+                        to="work"
+                        smooth={true}
+                        duration={500}
+                        offset={-80}
+                        className="text-sm font-medium hover:text-purple-400 transition-colors cursor-pointer"
                     >
                         Work
-                    </Link>
-                    <Link
-                        href="#contact"
-                        className="text-sm font-medium hover:text-purple-400 transition-colors"
+                    </ScrollLink>
+                    <ScrollLink
+                        to="contact"
+                        smooth={true}
+                        duration={500}
+                        offset={-80}
+                        className="text-sm font-medium hover:text-purple-400 transition-colors cursor-pointer"
                     >
                         Contact
-                    </Link>
+                    </ScrollLink>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -53,19 +66,22 @@ export default function Navbar() {
             </nav>
             <div className="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-20">
                 <Link
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/edanur-korkmaz/"
+                    target="_blank"
                     className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
                 >
                     <Linkedin className="h-5 w-5" />
                 </Link>
                 <Link
-                    href="https://github.com"
+                    href="https://github.com/edanuurkorkmaz"
+                    target="_blank"
                     className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
                 >
                     <Github className="h-5 w-5" />
                 </Link>
                 <Link
-                    href="https://twitter.com"
+                    href="https://x.com/edanuurkorkmaz"
+                    target="_blank"
                     className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
                 >
                     <Twitter className="h-5 w-5" />
