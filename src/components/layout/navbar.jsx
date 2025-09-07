@@ -109,7 +109,7 @@ export default function Navbar() {
       </AnimatePresence>
 
       {/* Social Links */}
-      <div className="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-20">
+      <div className="hidden md:flex fixed right-6  top-1/2 -translate-y-1/2 flex flex-col gap-4 z-20  ">
         <Link
           href="https://www.linkedin.com/in/edanur-korkmaz/"
           target="_blank"
